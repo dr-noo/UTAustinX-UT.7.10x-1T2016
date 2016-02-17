@@ -17,3 +17,12 @@ plot(bull$Events,
      main='Plot of Events vs Buckouts')
 
 abline(lm(bull$BuckOuts~bull$Events))
+
+# Calculating Correlations
+cor(bull$YearsPro,bull$BuckOuts) # -0.16
+
+cor(bull$Events,bull$BuckOuts) # 0.98
+
+# Correlation Matrix
+myvars <- c('YearsPro', 'Events', 'BuckOuts')
+cor(bull[,myvars])
